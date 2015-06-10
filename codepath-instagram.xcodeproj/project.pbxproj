@@ -13,6 +13,7 @@
 		E7B9F8B91B27AAFC008C3AFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B9F8B81B27AAFC008C3AFF /* Images.xcassets */; };
 		E7B9F8C81B27AAFC008C3AFF /* codepath_instagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9F8C71B27AAFC008C3AFF /* codepath_instagramTests.swift */; };
 		E7B9F8D31B27AF2A008C3AFF /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9F8D21B27AF2A008C3AFF /* PhotosViewController.swift */; };
+		E7E79B521B27F2F800887046 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E79B511B27F2F800887046 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		E7B9F8C61B27AAFC008C3AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7B9F8C71B27AAFC008C3AFF /* codepath_instagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codepath_instagramTests.swift; sourceTree = "<group>"; };
 		E7B9F8D21B27AF2A008C3AFF /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		E7E79B511B27F2F800887046 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B9F8D21B27AF2A008C3AFF /* PhotosViewController.swift */,
+				E7E79B511B27F2F800887046 /* PhotoCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7B9F8D31B27AF2A008C3AFF /* PhotosViewController.swift in Sources */,
+				E7E79B521B27F2F800887046 /* PhotoCell.swift in Sources */,
 				E7B9F8B21B27AAFC008C3AFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
