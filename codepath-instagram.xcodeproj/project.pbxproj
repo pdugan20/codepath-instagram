@@ -14,6 +14,7 @@
 		E7B9F8C81B27AAFC008C3AFF /* codepath_instagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9F8C71B27AAFC008C3AFF /* codepath_instagramTests.swift */; };
 		E7B9F8D31B27AF2A008C3AFF /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9F8D21B27AF2A008C3AFF /* PhotosViewController.swift */; };
 		E7E79B521B27F2F800887046 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E79B511B27F2F800887046 /* PhotoCell.swift */; };
+		E7F691B81B292BC10053CFBA /* PhotosDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F691B71B292BC10053CFBA /* PhotosDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		E7B9F8C71B27AAFC008C3AFF /* codepath_instagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codepath_instagramTests.swift; sourceTree = "<group>"; };
 		E7B9F8D21B27AF2A008C3AFF /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		E7E79B511B27F2F800887046 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		E7F691B61B29287F0053CFBA /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+		E7F691B71B292BC10053CFBA /* PhotosDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B9F8B01B27AAFC008C3AFF /* Info.plist */,
+				E7F691B61B29287F0053CFBA /* bridging-header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B9F8D21B27AF2A008C3AFF /* PhotosViewController.swift */,
+				E7F691B71B292BC10053CFBA /* PhotosDetailsViewController.swift */,
 				E7E79B511B27F2F800887046 /* PhotoCell.swift */,
 			);
 			name = "View Controllers";
@@ -280,6 +285,7 @@
 			files = (
 				E7B9F8D31B27AF2A008C3AFF /* PhotosViewController.swift in Sources */,
 				E7E79B521B27F2F800887046 /* PhotoCell.swift in Sources */,
+				E7F691B81B292BC10053CFBA /* PhotosDetailsViewController.swift in Sources */,
 				E7B9F8B21B27AAFC008C3AFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,10 +405,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "codepath-instagram/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "codepath-instagram/bridging-header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +421,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "codepath-instagram/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "codepath-instagram/bridging-header.h";
 			};
 			name = Release;
 		};

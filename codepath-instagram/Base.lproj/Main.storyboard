@@ -12,16 +12,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="281" sectionHeaderHeight="22" sectionFooterHeight="22" id="4Kf-By-ng4" userLabel="FeedTableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="319" sectionHeaderHeight="22" sectionFooterHeight="22" id="4Kf-By-ng4" userLabel="FeedTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="PhotoCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="281" id="kaY-r6-KyX" customClass="PhotoCell" customModule="codepath_instagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="281"/>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="PhotoCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="320" id="kaY-r6-KyX" customClass="PhotoCell" customModule="codepath_instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kaY-r6-KyX" id="MuO-0t-xfg">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="280.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="319.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="instaUrl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9AP-sS-rdK">
@@ -31,10 +31,16 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="aQ1-Vu-UT8" userLabel="instaImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="instaImageView" destination="aQ1-Vu-UT8" id="qnS-Zd-zal"/>
                                             <outlet property="instaUrlLabel" destination="9AP-sS-rdK" id="u0u-KB-Z4i"/>
+                                            <segue destination="eka-zQ-AIB" kind="push" id="znf-Tn-1c9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -50,6 +56,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="577" y="343"/>
+        </scene>
+        <!--Photos Details View Controller-->
+        <scene sceneID="nPl-aJ-DAg">
+            <objects>
+                <viewController id="eka-zQ-AIB" customClass="PhotosDetailsViewController" customModule="codepath_instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WSd-ia-79A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uhB-vj-ooj">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aap-Dh-mMc"/>
+                    <connections>
+                        <outlet property="instaImageView" destination="uhB-vj-ooj" id="kvU-hq-TsJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDR-i9-x2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="343"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YkO-E8-uti">

@@ -11,6 +11,7 @@ import UIKit
 class PhotoCell: UITableViewCell {
 
     @IBOutlet weak var instaUrlLabel: UILabel!
+    @IBOutlet weak var instaImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

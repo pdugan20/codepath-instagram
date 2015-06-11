@@ -42,8 +42,24 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = feedTableView.dequeueReusableCellWithIdentifier("PhotoCell") as! PhotoCell
         var photo = photos[indexPath.row] as! NSDictionary
-        cell.instaUrlLabel.text = photo.valueForKeyPath("images.low_resolution.url") as? String
+        var photoUrl = photo.valueForKeyPath("images.low_resolution.url") as? String
+        // cell.instaUrlLabel.text = photo.valueForKeyPath("images.low_resolution.url") as? String
+        cell.instaImageView.setImageWithURL(NSURL(string: photoUrl!))
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Determine which row was selected
+        var cell = sender as! UITableViewCell
+        var indexPath = feedTableView.indexPathForCell(cell)
+        
+        // Get the view controller that we're transitioning to.
+        var photosDetailsViewController = segue.destinationViewController as! PhotosDetailsViewController
+        
+        // Set the data of the view controller
+        var photo = photos[indexPath!.row] as! NSDictionary
+        var photoUrl = photo.valueForKeyPath("images.low_resolution.url") as? String
+        photosDetailsViewController.photoUrl = photoUrl
     }
 
     override func didReceiveMemoryWarning() {
