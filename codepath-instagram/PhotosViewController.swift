@@ -12,7 +12,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var feedTableView: UITableView!
     
-    var photos: NSArray! = []
+    duration
 
     override func viewDidLoad() {
         super.viewDidLoad()
